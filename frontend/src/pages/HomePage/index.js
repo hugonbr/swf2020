@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import { Container, InputGroup, FormControl, Button, Alert, Spinner } from 'react-bootstrap';
-import { ContentContainer, Form } from './styles';
+import { AdsBlock, ContentContainer, Form } from './styles';
 import ShortenerService from '../../services/ShortenerService';
 
 //OBS: Troquei o link de 'https://swf2020.tk/' para 'http://localhost:3000/'
@@ -81,6 +81,11 @@ class HomePage extends React.Component {
                             )}
                         {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
                     </Form>
+                </ContentContainer>
+                <ContentContainer>
+                    <AdsBlock>
+                        Adsense
+                    </AdsBlock>
                 </ContentContainer>
             </Container>
         )

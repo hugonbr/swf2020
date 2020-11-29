@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StatsContainer } from './styles';
 import ShortenerService from '../../services/ShortenerService';
 
 class RediretcPage extends React.Component {
@@ -30,11 +31,23 @@ class RediretcPage extends React.Component {
     }
 
     render() {
+        const { errorMessage } = this.state;
         return (
             <Container>
-                <Header>
-                    Redirecionando...
-                </Header>
+                {errorMessage ? (
+                    <>
+                        <Header>
+                            Seu novo encurtador de URL. :)
+                        </Header>
+                        <StatsContainer className="text-center">
+                            <FontAwesomeIcon size="3x" color="#f8d7fa" icon="exclamation-triangle" />
+                            <p className="m-3">{errorMessage}</p>
+                            <a className="btn btn-secondary" href="/">Encurtar nova URL</a>
+                        </StatsContainer>
+                    </>
+                ) : (
+                        <p className="text-center">Redirecionando...</p>
+                    )}
             </Container>
         )
     }
