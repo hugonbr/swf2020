@@ -68,14 +68,14 @@ class HomePage extends React.Component {
                                         <InputGroup className="mb-3">
                                             <FormControl
                                                 autoFocus={true}
-                                                defaultValue={`http://localhost:3000/${code}`}
+                                                defaultValue={`https://swf2020.tk/${code}`}
                                                 ref={(input) => this.inputURL = input}
                                             />
                                             <InputGroup.Append>
                                                 <Button variant="outline-info" onClick={() => this.copyToClipboard()} >Copiar</Button>
                                             </InputGroup.Append>
                                         </InputGroup>
-                                        <p>Para acompanhar as estatísticas, acesse http://localhost:3000/{code}</p>
+                                        <p>Para acompanhar as estatísticas, acesse https://swf2020.tk/{code}</p>
                                     </>
                                 )
                             )}

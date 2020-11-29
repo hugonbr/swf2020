@@ -59,7 +59,7 @@ class StatsPage extends React.Component {
                     </StatsContainer>
                 ) : (
                         <StatsContainer className="text-center">
-                            <p><b>http://localhost:3000/{shortenedURL.code}</b></p>
+                            <p><b>https://swf2020.tk/{shortenedURL.code}</b></p>
                             <p>Redireciona para:<br />{shortenedURL.url}</p>
                             <StatsRow>
                                 <StatsBox>
